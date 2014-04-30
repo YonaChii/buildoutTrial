@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+  <title>Question {{poll.id}}| Voting</title>
+</head>
+<body>
+  <h1 id='title' class='center'> {{ poll.text }} </h1>
+  {% if error_message %}
+    <p id='error' class='center'><strong>{{ error_message }}</strong></p>
+  {% endif %}
+  <div id='cont' class='center'>
+    <p><strong> Options: </strong></p> <hr>
+    <form id = 'voteForm' action="{% url 'polls:vote' poll.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in poll.option_set.all %}
+      <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"/>
+      <label for="choice{{ forloop.counter }}">{{ choice.text }} </label></br>
+    {% endfor %}
+    <input type="submit" value="vote"></br>
+    <a href="{% url 'polls:index' %}">Back</a>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,60 @@
+* {
+margin: auto 0;
+padding: 0;
+}
+
+body {
+  background:url('bg.png');
+}
+a {
+  color: #003366
+}
+
+p {
+  padding: 5px
+}
+
+li {
+  color: #8DCDC1 
+}
+
+a:hover {
+  color: #EB6E44
+}
+
+#error {
+  color: red
+}
+
+#title {
+  height: 50px;
+  background-color: rgba(124,120,126,0.5);
+  color: #FFF5C3;
+  padding: 10px;
+  text-align: center;
+}
+
+#qList {
+  width: 300px;
+  padding: 20px 0px 30px 0px;
+}
+
+#cont {
+  width: 500px;
+  background-color: rgba(211, 227, 151, 0.5);
+  padding: 10px 25px 25px 25px;
+}
+
+#voteForm {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+#output li{
+  color: #7C786A;
+  padding: 10px 0px 0px 20px;
+}
+
+.center {
+  margin: 0 auto 0 auto
+}
